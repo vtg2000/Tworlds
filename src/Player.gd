@@ -4,14 +4,17 @@ extends Actor
 export var stomp_impulse: = 600.0
 
 
+# warning-ignore:unused_argument
 func _on_StompDetector_area_entered(area: Area2D) -> void:
 	_velocity = calculate_stomp_velocity(_velocity, stomp_impulse)
 
 
+# warning-ignore:unused_argument
 func _on_EnemyDetector_body_entered(body: PhysicsBody2D) -> void:
 	die()
 
 
+# warning-ignore:unused_argument
 func _physics_process(delta: float) -> void:
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	var direction: = get_direction()
@@ -20,6 +23,8 @@ func _physics_process(delta: float) -> void:
 	_velocity = move_and_slide_with_snap(
 		_velocity, snap, FLOOR_NORMAL, true
 	)
+	if Input.is_action_just_released("switch"):
+		switch()
 
 
 func get_direction() -> Vector2:
@@ -44,6 +49,7 @@ func calculate_move_velocity(
 	return velocity
 
 
+# warning-ignore:shadowed_variable
 func calculate_stomp_velocity(linear_velocity: Vector2, stomp_impulse: float) -> Vector2:
 	var stomp_jump: = -speed.y if Input.is_action_pressed("jump") else -stomp_impulse
 	return Vector2(linear_velocity.x, stomp_jump)
@@ -51,3 +57,9 @@ func calculate_stomp_velocity(linear_velocity: Vector2, stomp_impulse: float) ->
 
 func die() -> void:
 	queue_free()
+
+func switch() -> void:
+	if position.y > 650:
+		position.y = 250
+	else:
+		position.y = 850

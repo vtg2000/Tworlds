@@ -5,7 +5,8 @@
 
 [node name="LevelTemplate" type="Node2D"]
 __meta__ = {
-"_edit_vertical_guides_": [  ]
+"_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738 ],
+"_edit_vertical_guides_": [ 288.99 ]
 }
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
@@ -22,17 +23,19 @@ tile_data = PoolIntArray( 65535, 1, 0, 0, 0, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1,
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 483.944, 863.801 )
 collision_mask = 4
+speed = Vector2( 800, 500 )
+gravity = 1000.0
 
 [node name="Sprite" parent="Player" index="0"]
 position = Vector2( -196.477, 120.422 )
 
-[node name="Camera2D" parent="Player" index="1"]
+[node name="CollisionShape2D" parent="Player" index="1"]
+position = Vector2( -196.477, 120.422 )
+
+[node name="Camera2D" parent="Player" index="2"]
 position = Vector2( 535.293, -318.958 )
 zoom = Vector2( 2, 2 )
 limit_top = 0
 limit_right = 3920
-
-[node name="CollisionShape2D" parent="Player" index="2"]
-position = Vector2( -196.477, 120.422 )
 
 [editable path="Player"]
