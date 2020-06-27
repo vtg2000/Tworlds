@@ -9,7 +9,7 @@
 [ext_resource path="res://src/Others/SpikeMover.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Others/portal.tscn" type="PackedScene" id=8]
 
-[node name="LevelTemplate" type="Node2D"]
+[node name="Level2" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738 ],
 "_edit_vertical_guides_": [ 288.99 ]
@@ -39,6 +39,9 @@ position = Vector2( 539.648, 554.238 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 375.782, 981.899 )
+speed = null
+gravity = null
+stomp_impulse = null
 
 [node name="KinematicBody2D2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1735.86, 1106.98 )

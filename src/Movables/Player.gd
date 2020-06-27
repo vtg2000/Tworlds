@@ -7,7 +7,7 @@ onready var anim_player: AnimationPlayer = get_node("AnimationPlayer")
 var player_tex1 = preload("res://assets/player.png")
 var player_tex2 = preload("res://assets/playerDark.png")
 var i = 0
-var levelList = ["res://src/Levels/Level2.tscn","res://src/Levels/LevelTemplate3.tscn"]
+var levelList = ["LevelTemplate","Level2","LevelTemplateV"]
 # warning-ignore:unused_argument
 func _on_StompDetector_area_entered(area: Area2D) -> void:
 	print('yay')
@@ -23,9 +23,13 @@ func _on_SpikeDetector_area_entered(_area: Area2D) -> void:
 	die()
 
 func _on_PortalDetector_area_entered(area):
-	print(levelList)
-	get_tree().change_scene(levelList[i])
-	levelList.erase(levelList[i])
+	var cur = get_tree().get_current_scene().get_name()
+	print(cur)
+	var i = 0
+	while levelList[i] != cur:
+		i+=1
+	i+=1
+	get_tree().change_scene("res://src/Levels/"+levelList[di]+".tscn")
 
 # warning-ignore:unused_argument
 func _physics_process(delta: float) -> void:
