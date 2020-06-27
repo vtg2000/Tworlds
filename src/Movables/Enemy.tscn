@@ -12,7 +12,7 @@ extents = Vector2( 40, 12.3177 )
 [node name="Enemy" type="KinematicBody2D"]
 position = Vector2( 0, -20.3359 )
 collision_layer = 4
-collision_mask = 2
+collision_mask = 3
 script = ExtResource( 2 )
 
 [node name="enemy" type="Sprite" parent="."]
@@ -32,7 +32,7 @@ physics_process_parent = true
 
 [node name="StompArea2D" type="Area2D" parent="."]
 position = Vector2( 0, -33.4343 )
-collision_layer = 0
+collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StompArea2D"]

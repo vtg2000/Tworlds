@@ -6,6 +6,7 @@ onready var anim_player: AnimationPlayer = get_node("AnimationPlayer")
 
 # warning-ignore:unused_argument
 func _on_StompDetector_area_entered(area: Area2D) -> void:
+	print('yay')
 	_velocity = calculate_stomp_velocity(_velocity, stomp_impulse)
 
 
@@ -15,6 +16,7 @@ func _on_EnemyDetector_body_entered(body: PhysicsBody2D) -> void:
 
 func _on_Area2D_area_entered(area):
 	die()
+
 # warning-ignore:unused_argument
 func _physics_process(delta: float) -> void:
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
