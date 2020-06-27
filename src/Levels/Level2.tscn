@@ -79,4 +79,21 @@ position = Vector2( 3448.51, 994.293 )
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 329.285, 1006.91 )
 
+[node name="Camera2D" parent="Player" index="2"]
+limit_bottom = 1278
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2( 5, 5 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Area2D"]
+margin_left = 9.5868
+margin_top = 9.5868
+margin_right = 119.587
+margin_bottom = 49.5868
+text = "Level 2
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [editable path="Player"]

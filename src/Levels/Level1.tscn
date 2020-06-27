@@ -11,7 +11,7 @@
 
 [node name="Level1" type="Node2D"]
 __meta__ = {
-"_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738 ],
+"_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738, 1272.09, 1282.31 ],
 "_edit_vertical_guides_": [ 288.99, -80.0 ]
 }
 
@@ -32,6 +32,7 @@ position = Vector2( 536, 1008 )
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_left = -80
+limit_bottom = 1278
 
 [node name="Spawner2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 2520, 576 )
@@ -61,5 +62,18 @@ position = Vector2( 2936, 1104 )
 
 [node name="Node2D" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3436.12, 990.076 )
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2( 5, 5 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Area2D"]
+margin_left = 12.9816
+margin_top = 9.89073
+margin_right = 95.9816
+margin_bottom = 49.8907
+text = "Level 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [editable path="Player"]
