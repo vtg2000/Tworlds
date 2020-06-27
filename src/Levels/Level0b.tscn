@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Movables/Enemy.tscn" type="PackedScene" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://src/Movables/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Others/Spikes.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Others/portal.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/Darkbackground.png" type="Texture" id=7]
+[ext_resource path="res://assets/background.png" type="Texture" id=8]
 
 [node name="Level0b" type="Node2D"]
 __meta__ = {
@@ -81,5 +83,18 @@ limit_bottom = 1200
 
 [node name="Node2D" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2811.39, 890.62 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Darkbackground" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1594.42, 905.521 )
+scale = Vector2( 1.70924, 0.510063 )
+texture = ExtResource( 7 )
+
+[node name="background" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Darkbackground"]
+position = Vector2( -6.82874, -1073.83 )
+texture = ExtResource( 8 )
 
 [editable path="Player"]

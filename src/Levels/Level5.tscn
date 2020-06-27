@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Movables/Enemy.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://src/Others/Spikes.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Others/ArrowShooter.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Others/CeilingSpikes.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/Darkbackground.png" type="Texture" id=10]
+[ext_resource path="res://assets/background.png" type="Texture" id=11]
 
 [node name="Level5" type="Node2D"]
 __meta__ = {
@@ -156,5 +158,19 @@ __meta__ = {
 [node name="ArrowShooter" parent="." instance=ExtResource( 8 )]
 position = Vector2( 839.058, 1086.4 )
 rotation = 3.14159
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="background" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1828.02, 283.663 )
+scale = Vector2( 2.24359, 0.65537 )
+texture = ExtResource( 11 )
+
+[node name="Darkbackground" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1922.83, 964.86 )
+scale = Vector2( 2.31309, 0.668375 )
+texture = ExtResource( 10 )
 
 [editable path="Player"]

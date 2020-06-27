@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/Darkbackground.png" type="Texture" id=2]
+[ext_resource path="res://assets/background.png" type="Texture" id=3]
 [ext_resource path="res://src/Movables/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Others/portal.tscn" type="PackedScene" id=6]
 
 [node name="Level0a" type="Node2D"]
 __meta__ = {
-"_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738 ],
+"_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738, 94.8831 ],
 "_edit_vertical_guides_": [ 288.99, -80.0, 1810.29 ]
 }
 
@@ -45,5 +47,19 @@ limit_right = 1810
 
 [node name="Node2D" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1395.18, 406.791 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="background" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 838.3, 160.953 )
+scale = Vector2( 1.13712, 0.814331 )
+texture = ExtResource( 3 )
+
+[node name="Darkbackground" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 837.564, 974.199 )
+scale = Vector2( 1.14788, 0.708166 )
+texture = ExtResource( 2 )
 
 [editable path="Player"]
