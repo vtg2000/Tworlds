@@ -14,12 +14,13 @@ func _on_StompDetector_area_entered(area: Area2D) -> void:
 func _on_EnemyDetector_body_entered(_body: PhysicsBody2D) -> void:
 	die()
 
-#for vtg maybe
-func _on_Area2D_area_entered(_area):
-	die()
 #for me!
 func _on_SpikeDetector_area_entered(_area: Area2D) -> void:
 	die()
+
+
+func _on_LevelChanger_body_entered(body):
+	get_tree().change_scene("res://src/Levels/LevelTemplateV.tscn")
 
 # warning-ignore:unused_argument
 func _physics_process(delta: float) -> void:

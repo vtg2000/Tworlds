@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/Movables/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://src/Movables/MovingSpikes.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Others/SpikeMover.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Others/Spikes.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Others/portal.tscn" type="PackedScene" id=8]
 
 [node name="LevelTemplate" type="Node2D"]
 __meta__ = {
@@ -46,15 +47,20 @@ position = Vector2( 16, 328 )
 position = Vector2( 24, 888 )
 
 [node name="SpikeMover" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1368, 616 )
+position = Vector2( 1521.45, 632.268 )
+scale = Vector2( 1.5, 1 )
 
 [node name="SpikeMover2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1360, 1176 )
+position = Vector2( 1564.81, 1189.01 )
+scale = Vector2( 1.5, 1 )
 
 [node name="Spikes" parent="." instance=ExtResource( 7 )]
 position = Vector2( 3120, 552 )
 
 [node name="Spikes2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2936, 1104 )
+
+[node name="Node2D" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3406.84, 977.062 )
 
 [editable path="Player"]
