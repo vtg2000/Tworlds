@@ -5,7 +5,7 @@
 [ext_resource path="res://src/Movables/Player.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 203.908, 203.064 )
+extents = Vector2( 330.33, 331.347 )
 
 [node name="TheEnd" type="Node2D"]
 __meta__ = {
@@ -38,10 +38,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Area2D2" type="Area2D" parent="TileMap"]
-position = Vector2( 710.484, 915.199 )
-scale = Vector2( 3, 3 )
-
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 275.168, 991.698 )
 
@@ -59,7 +55,7 @@ position = Vector2( -7.18896, 7.18921 )
 shape = SubResource( 1 )
 
 [node name="golden_trophy" type="Sprite" parent="TrophyBox"]
-position = Vector2( -21.6729, 32.509 )
+position = Vector2( -4.02055, -2.79617 )
 texture = ExtResource( 2 )
 [connection signal="area_entered" from="TrophyBox" to="Player" method="_on_TrophyBox_area_entered"]
 

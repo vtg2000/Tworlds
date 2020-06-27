@@ -12,7 +12,7 @@
 [node name="Level1" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738, 1272.09, 1282.31 ],
-"_edit_vertical_guides_": [ 288.99, -80.0 ]
+"_edit_vertical_guides_": [ 288.99, -80.0, 2703.17, 3630.0 ]
 }
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
@@ -32,6 +32,7 @@ position = Vector2( 536, 1008 )
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_left = -80
+limit_right = 3616
 limit_bottom = 1278
 
 [node name="Spawner2" parent="." instance=ExtResource( 8 )]

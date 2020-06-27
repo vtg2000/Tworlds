@@ -7,7 +7,7 @@
 [node name="Level0a" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738 ],
-"_edit_vertical_guides_": [ 288.99, -80.0 ]
+"_edit_vertical_guides_": [ 288.99, -80.0, 1810.29 ]
 }
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
@@ -26,9 +26,9 @@ scale = Vector2( 3, 3 )
 [node name="RichTextLabel" type="RichTextLabel" parent="TileMap/Area2D"]
 anchor_bottom = 0.172
 margin_left = 99.3866
-margin_top = 92.7732
+margin_top = 91.5083
 margin_right = 636.387
-margin_bottom = 130.773
+margin_bottom = 129.508
 text = "Press S to change sides
 
 "
@@ -41,6 +41,7 @@ position = Vector2( 275.168, 991.698 )
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_left = -80
+limit_right = 1810
 
 [node name="Node2D" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1395.18, 406.791 )
