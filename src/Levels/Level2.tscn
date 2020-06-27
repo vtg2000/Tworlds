@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Movables/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://src/Movables/MovingSpikes.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Others/SpikeMover.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Others/portal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Others/CeilingSpikes.tscn" type="PackedScene" id=9]
 
 [node name="Level2" type="Node2D"]
 __meta__ = {
@@ -96,5 +97,11 @@ text = "Level 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CeilingSpikes" parent="." instance=ExtResource( 9 )]
+position = Vector2( 936.007, 217.802 )
+
+[node name="CeilingSpikes2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3444.89, 212.64 )
 
 [editable path="Player"]
