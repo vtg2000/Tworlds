@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://assets/player.png" type="Texture" id=1]
+[ext_resource path="res://assets/playerDark.png" type="Texture" id=1]
 [ext_resource path="res://src/Movables/Player.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -62,6 +62,8 @@ shape = SubResource( 1 )
 position = Vector2( 0, -336 )
 current = true
 zoom = Vector2( 2, 2 )
+limit_left = 0
+limit_top = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/SwitchAnimation = SubResource( 2 )
