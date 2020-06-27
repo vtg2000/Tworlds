@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Movables/Enemy.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://src/Others/SpikeMover.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Others/portal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Others/Spikes.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Others/ArrowShooter.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Others/CeilingSpikes.tscn" type="PackedScene" id=9]
 
 [node name="Level5" type="Node2D"]
@@ -26,10 +27,6 @@ tile_data = PoolIntArray( 65535, 1, 0, 0, 0, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1,
 
 [node name="Enemy" parent="TileMap" instance=ExtResource( 2 )]
 position = Vector2( 2291.64, 1094.51 )
-scale = Vector2( 0.75, 0.75 )
-
-[node name="Enemy2" parent="TileMap" instance=ExtResource( 2 )]
-position = Vector2( 1331.57, 1094.51 )
 scale = Vector2( 0.75, 0.75 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
@@ -155,5 +152,9 @@ text = "Level 1"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ArrowShooter" parent="." instance=ExtResource( 8 )]
+position = Vector2( 839.058, 1086.4 )
+rotation = 3.14159
 
 [editable path="Player"]

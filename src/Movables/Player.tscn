@@ -41,7 +41,7 @@ tracks/1/keys = {
 extents = Vector2( 42.6217, 47.9988 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 43.0626, 48 )
+extents = Vector2( 43.0626, 38.3667 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 50.3087, 48.374 )
@@ -91,7 +91,7 @@ collision_layer = 0
 collision_mask = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortalDetector"]
-position = Vector2( 0, -48 )
+position = Vector2( 0, -48.2737 )
 shape = SubResource( 5 )
 [connection signal="area_entered" from="StompDetector" to="." method="_on_StompDetector_area_entered"]
 [connection signal="area_entered" from="SpikeDetector" to="." method="_on_SpikeDetector_area_entered"]
