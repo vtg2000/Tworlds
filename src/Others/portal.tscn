@@ -4,13 +4,13 @@
 [ext_resource path="res://src/Others/LevelChanger.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 68.8888, 102.848 )
+extents = Vector2( 49.0131, 79.9968 )
 
 [node name="Portal" type="Node2D"]
 
 [node name="LevelChanger" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 64
+collision_mask = 0
 script = ExtResource( 2 )
 
 [node name="PortalShape2D" type="CollisionShape2D" parent="LevelChanger"]
