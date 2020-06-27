@@ -43,9 +43,11 @@ position = Vector2( 1120, 1048 )
 
 [node name="MovingSpikes" parent="." instance=ExtResource( 3 )]
 position = Vector2( 16, 328 )
+speedh = 400
 
 [node name="MovingSpikes2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 24, 888 )
+speedh = 400
 
 [node name="SpikeMover" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1521.45, 632.268 )

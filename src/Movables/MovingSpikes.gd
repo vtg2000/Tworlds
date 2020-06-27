@@ -1,7 +1,8 @@
 extends Actor
 
+export var speedh: = 200
 func _ready() -> void:
-	_velocity = Vector2(200,0)
+	_velocity = Vector2(speedh,0)
 
 
 func _physics_process(delta: float) -> void:
