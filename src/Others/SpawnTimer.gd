@@ -5,6 +5,10 @@ func _ready() -> void:
 
 var Enemy = preload ("res://src/Movables/Enemy.tscn")
 
+func enemyDied() -> void:
+	var parent = get_node("..")
+	parent.decreaseCount()
+
 func _on_SpawnTimer_timeout() -> void:
 	var parent = get_node("..")
 	var e = Enemy.instance()
