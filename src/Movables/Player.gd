@@ -2,7 +2,7 @@ extends Actor
 
 
 export var stomp_impulse: = 600.0
-
+onready var anim_player: AnimationPlayer = get_node("AnimationPlayer")
 
 # warning-ignore:unused_argument
 func _on_StompDetector_area_entered(area: Area2D) -> void:
@@ -24,7 +24,8 @@ func _physics_process(delta: float) -> void:
 		_velocity, snap, FLOOR_NORMAL, true
 	)
 	if Input.is_action_just_released("switch"):
-		switch()
+#		switch()
+		anim_player.play("SwitchAnimation")
 
 
 func get_direction() -> Vector2:

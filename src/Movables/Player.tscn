@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/player.png" type="Texture" id=1]
 [ext_resource path="res://src/Movables/Player.gd" type="Script" id=2]
@@ -6,7 +6,38 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 38.032, 45.7524 )
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[sub_resource type="Animation" id=2]
+resource_name = "SwitchAnimation"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 2.14355, 1.74111 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.25 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "switch"
+} ]
+}
+
+[node name="Player" type="KinematicBody2D"]
 collision_layer = 2
 script = ExtResource( 2 )
 
@@ -19,3 +50,6 @@ shape = SubResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, -104 )
 current = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/SwitchAnimation = SubResource( 2 )
