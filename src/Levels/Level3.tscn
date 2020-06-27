@@ -3,12 +3,12 @@
 [ext_resource path="res://src/Movables/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://src/Movables/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/Others/Spikes.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/Movables/MovingSpikes.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/Others/SpikeMover.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Movables/MovingSpikes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Others/SpikeMover.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Others/Spikes.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Others/portal.tscn" type="PackedScene" id=8]
 
-[node name="LevelTemplateV" type="Node2D"]
+[node name="Level3" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738 ],
 "_edit_vertical_guides_": [ 288.99 ]
@@ -32,40 +32,40 @@ position = Vector2( 1118.6, 1070.24 )
 [node name="Enemy4" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1714.02, 1082.65 )
 
-[node name="Spikes" parent="." instance=ExtResource( 5 )]
+[node name="Spikes" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1883.07, 1110.92 )
 
-[node name="Spikes3" parent="." instance=ExtResource( 5 )]
+[node name="Spikes3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2363.32, 1108.27 )
 
-[node name="Spikes4" parent="." instance=ExtResource( 5 )]
+[node name="Spikes4" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2597.71, 1111.69 )
 
-[node name="Spikes5" parent="." instance=ExtResource( 5 )]
+[node name="Spikes5" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1849.5, 544.821 )
 
-[node name="Spikes6" parent="." instance=ExtResource( 5 )]
+[node name="Spikes6" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1972.07, 541.216 )
 
-[node name="Spikes7" parent="." instance=ExtResource( 5 )]
+[node name="Spikes7" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1716.11, 544.821 )
 
-[node name="Spikes8" parent="." instance=ExtResource( 5 )]
+[node name="Spikes8" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2249.66, 544.821 )
 
-[node name="Spikes9" parent="." instance=ExtResource( 5 )]
+[node name="Spikes9" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2401.07, 544.821 )
 
-[node name="Spikes11" parent="." instance=ExtResource( 5 )]
+[node name="Spikes11" parent="." instance=ExtResource( 7 )]
 position = Vector2( 3078.24, 544.821 )
 
 [node name="Enemy5" parent="." instance=ExtResource( 1 )]
 position = Vector2( 3132.31, 1071.16 )
 
-[node name="Spikes2" parent="." instance=ExtResource( 5 )]
+[node name="Spikes2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2120.89, 1110.92 )
 
-[node name="Spikes10" parent="." instance=ExtResource( 5 )]
+[node name="Spikes10" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2548.88, 544.821 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 1 )]
@@ -74,22 +74,26 @@ position = Vector2( 1355.28, 509.592 )
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 375.782, 981.899 )
 
-[node name="KinematicBody2D3" parent="." instance=ExtResource( 5 )]
+[node name="Camera2D" parent="Player" index="2"]
+limit_left = -80
+limit_top = 0
+
+[node name="KinematicBody2D3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2106.76, 544.117 )
 
-[node name="MovingSpikes" parent="." instance=ExtResource( 6 )]
+[node name="MovingSpikes" parent="." instance=ExtResource( 5 )]
 position = Vector2( 90.8249, 894.197 )
 scale = Vector2( 1, 0.9 )
 
-[node name="MovingSpikes2" parent="." instance=ExtResource( 6 )]
+[node name="MovingSpikes2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 90.8249, 339.381 )
 scale = Vector2( 1, 0.9 )
 
-[node name="SpikeMover" parent="." instance=ExtResource( 7 )]
+[node name="SpikeMover" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1550.89, 1168.76 )
 scale = Vector2( 1.5, 1 )
 
-[node name="SpikeMover2" parent="." instance=ExtResource( 7 )]
+[node name="SpikeMover2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1558.09, 620 )
 scale = Vector2( 1.5, 1 )
 

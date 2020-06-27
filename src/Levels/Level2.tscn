@@ -79,4 +79,8 @@ position = Vector2( 3448.51, 994.293 )
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 329.285, 1006.91 )
 
+[node name="Camera2D" parent="Player" index="2"]
+limit_left = -80
+limit_top = 0
+
 [editable path="Player"]
