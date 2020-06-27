@@ -29,7 +29,7 @@ func _on_PortalDetector_area_entered(area):
 	while levelList[i] != cur:
 		i+=1
 	i+=1
-	get_tree().change_scene("res://src/Levels/"+levelList[di]+".tscn")
+	get_tree().change_scene("res://src/Levels/"+levelList[i]+".tscn")
 
 # warning-ignore:unused_argument
 func _physics_process(delta: float) -> void:
