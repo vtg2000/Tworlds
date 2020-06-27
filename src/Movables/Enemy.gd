@@ -16,7 +16,13 @@ func _on_StompArea2D_body_entered(body: Node) -> void:
 		return
 	die()
 
+func _on_StompArea2D_area_entered(body: Node) -> void:
+	if body.global_position.y > get_node("StompArea2D").global_position.y:
+		return
+	die()
+
 func die() -> void:
 	queue_free()
 	var parent = get_node('..')
-	parent.enemyDied()
+	if parent is Timer:
+		parent.enemyDied()

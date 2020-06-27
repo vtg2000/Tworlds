@@ -23,9 +23,6 @@ tile_data = PoolIntArray( 65535, 1, 0, 0, 0, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1,
 [node name="Spawner" parent="." instance=ExtResource( 3 )]
 position = Vector2( 2240, 1136 )
 
-[node name="Enemy" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1248, 1032 )
-
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 536, 1008 )
 
@@ -35,5 +32,8 @@ limit_top = 0
 
 [node name="Spawner2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 2520, 576 )
+
+[node name="Enemy" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1120, 1048 )
 
 [editable path="Player"]
