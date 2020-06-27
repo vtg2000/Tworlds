@@ -9,6 +9,8 @@ extents = Vector2( 51.6301, 22.4698 )
 extents = Vector2( 43.6669, 4.2682 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
+collision_layer = 0
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 37.5407, -13.6512 )
