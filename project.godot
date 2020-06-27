@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="OurGame"
-run/main_scene="res://src/Levels/LevelTemplate.tscn"
+run/main_scene="res://src/Levels/Level4.tscn"
 config/icon="res://icon.png"
 
 [input]
