@@ -8,11 +8,13 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if _dir == 0:
 		position.x -= 500.0*delta
-	else:
+	elif _dir == 1:
 		position.y += 500.0*delta
+	else:
+		position.x += 500.0*delta
 
 func setDirection(a: int) -> void:
-	_dir = 1
+	_dir = a
 
 func _on_Area2D_area_entered(area: Area2D) -> void:
 	queue_free()
