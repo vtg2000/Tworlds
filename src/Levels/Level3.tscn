@@ -107,10 +107,10 @@ position = Vector2( 3444.47, 1002.21 )
 scale = Vector2( 5, 5 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Area2D"]
-margin_left = 15.0485
-margin_top = 7.08165
-margin_right = 99.0485
-margin_bottom = 47.0816
+margin_left = 20.0
+margin_top = 18.0
+margin_right = 101.0
+margin_bottom = 50.0
 text = "Level 3
 "
 __meta__ = {
