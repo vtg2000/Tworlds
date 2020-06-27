@@ -11,7 +11,7 @@
 [node name="Level3" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738 ],
-"_edit_vertical_guides_": [ 288.99 ]
+"_edit_vertical_guides_": [ 288.99, 3612.59 ]
 }
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
@@ -76,6 +76,7 @@ position = Vector2( 375.782, 981.899 )
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_left = -80
+limit_right = 3613
 limit_bottom = 1278
 
 [node name="KinematicBody2D3" parent="." instance=ExtResource( 7 )]
