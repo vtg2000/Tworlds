@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/Movables/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://src/Others/Spawner.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Movables/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Others/Spikes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Movables/MovingSpikes.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Others/SpikeMover.tscn" type="PackedScene" id=7]
 
 [node name="LevelTemplate" type="Node2D"]
 __meta__ = {
@@ -26,7 +28,7 @@ tile_data = PoolIntArray( 65535, 1, 0, 0, 0, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1,
 position = Vector2( 2240, 1136 )
 
 [node name="Enemy" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1296, 984 )
+position = Vector2( 1522.04, 980.575 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 5 )]
 position = Vector2( 539.648, 554.238 )
@@ -42,5 +44,19 @@ position = Vector2( 2106.76, 544.117 )
 
 [node name="KinematicBody2D4" parent="." instance=ExtResource( 5 )]
 position = Vector2( 3268.79, 1103.73 )
+
+[node name="MovingSpikes" parent="." instance=ExtResource( 6 )]
+position = Vector2( 90.8249, 894.197 )
+scale = Vector2( 1, 0.9 )
+
+[node name="MovingSpikes2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 90.8249, 339.381 )
+scale = Vector2( 1, 0.9 )
+
+[node name="SpikeMover" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1549.68, 1173.89 )
+
+[node name="SpikeMover2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1550.1, 628.326 )
 
 [editable path="Player"]
