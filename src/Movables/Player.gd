@@ -4,6 +4,9 @@ extends Actor
 export var stomp_impulse: = 600.0
 onready var anim_player: AnimationPlayer = get_node("AnimationPlayer")
 
+var player_tex1 = preload("res://assets/player.png")
+var player_tex2 = preload("res://assets/playerDark.png")
+
 # warning-ignore:unused_argument
 func _on_StompDetector_area_entered(area: Area2D) -> void:
 	print('yay')
@@ -41,6 +44,12 @@ func get_direction() -> Vector2:
 		-Input.get_action_strength("jump") if is_on_floor() and Input.is_action_just_pressed("jump") else 0.0
 	)
 
+func switch_pic(isLight: bool) -> void:
+	if isLight:
+		get_node("Sprite").set_texture(player_tex1)
+	else:
+		get_node("Sprite").set_texture(player_tex2)
+
 
 func calculate_move_velocity(
 		linear_velocity: Vector2,
@@ -69,6 +78,9 @@ func die() -> void:
 
 func switch() -> void:
 	if position.y > 650:
-		position.y = 250
+		position.y = 350
+		switch_pic(true)
 	else:
-		position.y = 850
+		position.y = 900
+		switch_pic(false)
+	

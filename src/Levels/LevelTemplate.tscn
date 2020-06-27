@@ -10,7 +10,7 @@
 
 [node name="LevelTemplate" type="Node2D"]
 __meta__ = {
-"_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738 ],
+"_edit_horizontal_guides_": [ 641.995, 384.0, 312.0, 920.0, 635.738 ],
 "_edit_vertical_guides_": [ 288.99, -80.0 ]
 }
 
@@ -46,10 +46,12 @@ position = Vector2( 16, 328 )
 position = Vector2( 24, 888 )
 
 [node name="SpikeMover" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1368, 616 )
+position = Vector2( 1760, 624 )
+scale = Vector2( 1.2, 1 )
 
 [node name="SpikeMover2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1360, 1176 )
+position = Vector2( 1752, 1184 )
+scale = Vector2( 1.2, 1 )
 
 [node name="Spikes" parent="." instance=ExtResource( 7 )]
 position = Vector2( 3120, 552 )
