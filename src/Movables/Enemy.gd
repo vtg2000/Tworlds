@@ -11,13 +11,12 @@ func _physics_process(delta: float) -> void:
 	_velocity.x *= -1 if is_on_wall() else 1
 	_velocity.y = move_and_slide(_velocity, FLOOR_NORMAL).y
 
-
-func _on_StompArea2D_area_entered(area: Area2D) -> void:
-	print('stomp ', area.global_position.y,' ' ,stomp_area.global_position.y)
-	if area.global_position.y > stomp_area.global_position.y:
+func _on_StompArea2D_body_entered(body: Node) -> void:
+	print('stomp ', body.global_position.y,' ' ,stomp_area.global_position.y)
+	if body.global_position.y < stomp_area.global_position.y:
 		return
+	print('dying')
 	die()
-
 
 func die() -> void:
 	queue_free()
