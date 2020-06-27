@@ -11,7 +11,7 @@
 [node name="Level3" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738 ],
-"_edit_vertical_guides_": [ 288.99 ]
+"_edit_vertical_guides_": [ 288.99, 3612.59 ]
 }
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
@@ -76,7 +76,8 @@ position = Vector2( 375.782, 981.899 )
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_left = -80
-limit_top = 0
+limit_right = 3613
+limit_bottom = 1278
 
 [node name="KinematicBody2D3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2106.76, 544.117 )
@@ -99,5 +100,19 @@ scale = Vector2( 1.5, 1 )
 
 [node name="Portal" parent="." instance=ExtResource( 8 )]
 position = Vector2( 3444.47, 1002.21 )
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2( 5, 5 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Area2D"]
+margin_left = 15.0485
+margin_top = 7.08165
+margin_right = 99.0485
+margin_bottom = 47.0816
+text = "Level 3
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [editable path="Player"]

@@ -6,8 +6,8 @@ onready var anim_player: AnimationPlayer = get_node("AnimationPlayer")
 
 var player_tex1 = preload("res://assets/player.png")
 var player_tex2 = preload("res://assets/playerDark.png")
-#var i = 0
-var levelList = ["Level0", "Level0a","Level1","Level2","Level3","Level4"]
+var i = 0
+var levelList = ["Level0", "Level0a","Level0b","Level1","Level2","Level3","Level4","TheEnd"]
 # warning-ignore:unused_argument
 func _on_StompDetector_area_entered(area: Area2D) -> void:
 	print('yay')
@@ -22,6 +22,9 @@ func _on_EnemyDetector_body_entered(_body: PhysicsBody2D) -> void:
 func _on_SpikeDetector_area_entered(_area: Area2D) -> void:
 	die()
 
+func _on_TrophyBox_area_entered(area):
+	get_tree().change_scene("res://src/Levels/Level0.tscn")
+	
 func _on_PortalDetector_area_entered(area):
 	var cur = get_tree().get_current_scene().get_name()
 	print(cur)
@@ -93,3 +96,6 @@ func switch() -> void:
 	
 
 # Replace with function body.
+
+
+ # Replace with function body.

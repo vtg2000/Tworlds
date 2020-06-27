@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Movables/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=2]
@@ -8,11 +8,12 @@
 [ext_resource path="res://src/Movables/MovingSpikes.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Others/SpikeMover.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Others/portal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Others/CeilingSpikes.tscn" type="PackedScene" id=9]
 
 [node name="Level2" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738 ],
-"_edit_vertical_guides_": [ 288.99 ]
+"_edit_vertical_guides_": [ 288.99, 3620.41, 3620.41 ]
 }
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
@@ -78,5 +79,29 @@ position = Vector2( 3448.51, 994.293 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 329.285, 1006.91 )
+
+[node name="Camera2D" parent="Player" index="2"]
+limit_right = 3620
+limit_bottom = 1278
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2( 5, 5 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Area2D"]
+margin_left = 9.5868
+margin_top = 9.5868
+margin_right = 119.587
+margin_bottom = 49.5868
+text = "Level 2
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CeilingSpikes" parent="." instance=ExtResource( 9 )]
+position = Vector2( 936.007, 217.802 )
+
+[node name="CeilingSpikes2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3444.89, 212.64 )
 
 [editable path="Player"]

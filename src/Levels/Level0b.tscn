@@ -1,0 +1,85 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://src/Movables/Enemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Others/CeilingSpikes.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Movables/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Others/Spikes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Others/portal.tscn" type="PackedScene" id=6]
+
+[node name="Level0b" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738, 1195.14 ],
+"_edit_vertical_guides_": [ 288.99, -80.0, 3129.3 ]
+}
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 80, 80 )
+format = 1
+tile_data = PoolIntArray( 65551, 0, 0, 65552, 0, 0, 65553, 0, 0, 65554, 0, 0, 65555, 0, 0, 65556, 0, 0, 65557, 0, 0, 65558, 0, 0, 65559, 0, 0, 65560, 0, 0, 65561, 0, 0, 65562, 0, 0, 65563, 0, 0, 65564, 0, 0, 65565, 0, 0, 65566, 0, 0, 65567, 0, 0, 65568, 0, 0, 65569, 0, 0, 65570, 0, 0, 65571, 0, 0, 65572, 0, 0, 65573, 0, 0, 65574, 0, 0, 131087, 0, 0, 131088, 0, 0, 131089, 0, 0, 131090, 0, 0, 131091, 0, 0, 131092, 0, 0, 131093, 0, 0, 131094, 0, 0, 131095, 0, 0, 131096, 0, 0, 131097, 0, 0, 131098, 0, 0, 131099, 0, 0, 131100, 0, 0, 131101, 0, 0, 131102, 0, 0, 131103, 0, 0, 131104, 0, 0, 131105, 0, 0, 131106, 0, 0, 131107, 0, 0, 131108, 0, 0, 131109, 0, 0, 131110, 0, 0, 196623, 0, 0, 196624, 0, 0, 196645, 0, 0, 196646, 0, 0, 262159, 0, 0, 262160, 0, 0, 262181, 0, 0, 262182, 0, 0, 327695, 0, 0, 327696, 0, 0, 327717, 0, 0, 327718, 0, 0, 393231, 0, 0, 393232, 0, 0, 393239, 0, 0, 393240, 0, 0, 393241, 0, 0, 393249, 0, 0, 393250, 0, 0, 393251, 0, 0, 393252, 0, 0, 393253, 0, 0, 393254, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458768, 0, 0, 458769, 0, 0, 458770, 0, 0, 458771, 0, 0, 458772, 0, 0, 458773, 0, 0, 458774, 0, 0, 458775, 0, 0, 458776, 0, 0, 458777, 0, 0, 458778, 0, 0, 458779, 0, 0, 458780, 0, 0, 458781, 0, 0, 458782, 0, 0, 458783, 0, 0, 458784, 0, 0, 458785, 0, 0, 458786, 0, 0, 458787, 0, 0, 458788, 0, 0, 458789, 0, 0, 458790, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524306, 1, 0, 524307, 1, 0, 524308, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 524320, 0, 0, 524321, 0, 0, 524322, 0, 0, 524323, 0, 0, 524324, 0, 0, 524325, 0, 0, 524326, 0, 0, 589824, 0, 0, 589825, 0, 0, 589845, 0, 0, 589846, 0, 0, 589855, 0, 0, 589856, 0, 0, 589861, 0, 0, 589862, 0, 0, 655360, 0, 0, 655361, 0, 0, 655381, 0, 0, 655382, 0, 0, 655391, 0, 0, 655392, 0, 0, 655397, 0, 0, 655398, 0, 0, 720896, 0, 0, 720897, 0, 0, 720917, 0, 0, 720918, 0, 0, 720927, 0, 0, 720928, 0, 0, 720933, 0, 0, 720934, 0, 0, 786432, 0, 0, 786433, 0, 0, 786449, 0, 0, 786453, 0, 0, 786454, 0, 0, 786463, 0, 0, 786464, 0, 0, 786469, 0, 0, 786470, 0, 0, 851968, 0, 0, 851969, 0, 0, 851970, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0, 851983, 0, 0, 851984, 0, 0, 851985, 0, 0, 851986, 0, 0, 851987, 0, 0, 851988, 0, 0, 851989, 0, 0, 851990, 0, 0, 851991, 0, 0, 851992, 0, 0, 851993, 0, 0, 851994, 0, 0, 851995, 0, 0, 851996, 0, 0, 851997, 0, 0, 851998, 0, 0, 851999, 0, 0, 852000, 0, 0, 852001, 0, 0, 852002, 0, 0, 852003, 0, 0, 852004, 0, 0, 852005, 0, 0, 852006, 0, 0, 917504, 1, 0, 917505, 1, 0, 917506, 1, 0, 917507, 0, 0, 917508, 0, 0, 917509, 0, 0, 917510, 0, 0, 917511, 0, 0, 917512, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 0, 0, 917522, 0, 0, 917523, 0, 0, 917524, 0, 0, 917525, 0, 0, 917526, 0, 0, 917527, 0, 0, 917528, 0, 0, 917529, 0, 0, 917530, 0, 0, 917531, 0, 0, 917532, 0, 0, 917533, 0, 0, 917534, 0, 0, 917535, 0, 0, 917536, 0, 0, 917537, 0, 0, 917538, 0, 0, 917539, 0, 0, 917540, 0, 0, 917541, 0, 0, 917542, 0, 0 )
+
+[node name="Area2D" type="Area2D" parent="TileMap"]
+position = Vector2( 635, 584 )
+scale = Vector2( 5, 5 )
+
+[node name="Area2D2" type="Area2D" parent="TileMap"]
+position = Vector2( 710.484, 915.199 )
+scale = Vector2( 3, 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TileMap/Area2D2"]
+margin_left = -63.1973
+margin_top = -33.6548
+margin_right = 183.803
+margin_bottom = 11.3452
+text = "Avoid enemies and spikes. Jump on enemies to stomp them"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Enemy" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( 1594.42, 1004.56 )
+
+[node name="Spikes" parent="TileMap" instance=ExtResource( 5 )]
+position = Vector2( 1669.66, 544.257 )
+
+[node name="Spikes2" parent="TileMap" instance=ExtResource( 5 )]
+position = Vector2( 2187.51, 539.831 )
+
+[node name="Spikes3" parent="TileMap" instance=ExtResource( 5 )]
+position = Vector2( 2492.9, 544.257 )
+
+[node name="Spikes4" parent="TileMap" instance=ExtResource( 5 )]
+position = Vector2( 1952.93, 1022.27 )
+
+[node name="Spikes5" parent="TileMap" instance=ExtResource( 5 )]
+position = Vector2( 2143.25, 1026.69 )
+
+[node name="Spikes6" parent="TileMap" instance=ExtResource( 5 )]
+position = Vector2( 2315.86, 1026.69 )
+
+[node name="CeilingSpikes" parent="TileMap" instance=ExtResource( 3 )]
+position = Vector2( 1988.34, 765.558 )
+
+[node name="CeilingSpikes2" parent="TileMap" instance=ExtResource( 3 )]
+position = Vector2( 2183.08, 765.558 )
+
+[node name="CeilingSpikes3" parent="TileMap" instance=ExtResource( 3 )]
+position = Vector2( 2360.12, 761.132 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 275.168, 991.698 )
+
+[node name="Camera2D" parent="Player" index="2"]
+position = Vector2( 629.8, -88.2098 )
+limit_left = -80
+limit_right = 3129
+limit_bottom = 1200
+
+[node name="Node2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2811.39, 890.62 )
+
+[editable path="Player"]
