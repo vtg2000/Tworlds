@@ -13,9 +13,6 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_StompArea2D_area_entered(area: Area2D) -> void:
-	print('stomp ', area.global_position.y,' ' ,stomp_area.global_position.y)
-	if area.global_position.y > stomp_area.global_position.y:
-		return
 	die()
 
 

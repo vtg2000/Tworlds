@@ -4,7 +4,7 @@
 [ext_resource path="res://src/Movables/Player.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 38.032, 45.7524 )
+extents = Vector2( 38.032, 44.0218 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "SwitchAnimation"
@@ -38,7 +38,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 40.6767, 3.27692 )
+extents = Vector2( 40.6767, 44.301 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
@@ -62,6 +62,6 @@ anims/SwitchAnimation = SubResource( 2 )
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0, 42.0912 )
+position = Vector2( 0, 0.697319 )
 shape = SubResource( 3 )
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
