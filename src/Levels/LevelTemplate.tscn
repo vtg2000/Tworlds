@@ -55,8 +55,10 @@ scale = Vector2( 1, 0.9 )
 
 [node name="SpikeMover" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1549.68, 1173.89 )
+scale = Vector2( 1.5, 1 )
 
 [node name="SpikeMover2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1550.1, 628.326 )
+scale = Vector2( 1.5, 1 )
 
 [editable path="Player"]
