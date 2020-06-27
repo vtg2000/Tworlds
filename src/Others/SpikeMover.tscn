@@ -3,7 +3,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1467.05, 60.4407 )
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="SpikeMover" type="KinematicBody2D"]
 collision_layer = 32
 collision_mask = 0
 

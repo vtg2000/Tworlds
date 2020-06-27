@@ -11,10 +11,14 @@ func _on_StompDetector_area_entered(area: Area2D) -> void:
 
 
 # warning-ignore:unused_argument
-func _on_EnemyDetector_body_entered(body: PhysicsBody2D) -> void:
+func _on_EnemyDetector_body_entered(_body: PhysicsBody2D) -> void:
 	die()
 
-func _on_Area2D_area_entered(area):
+#for vtg maybe
+func _on_Area2D_area_entered(_area):
+	die()
+#for me!
+func _on_SpikeDetector_area_entered(_area: Area2D) -> void:
 	die()
 
 # warning-ignore:unused_argument
@@ -61,12 +65,10 @@ func calculate_stomp_velocity(linear_velocity: Vector2, stomp_impulse: float) ->
 
 func die() -> void:
 	queue_free()
+	get_tree().reload_current_scene()
 
 func switch() -> void:
 	if position.y > 650:
 		position.y = 250
 	else:
 		position.y = 850
-
-
- # Replace with function body.
