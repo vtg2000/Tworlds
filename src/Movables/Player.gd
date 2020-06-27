@@ -13,7 +13,8 @@ func _on_StompDetector_area_entered(area: Area2D) -> void:
 func _on_EnemyDetector_body_entered(body: PhysicsBody2D) -> void:
 	die()
 
-
+func _on_Area2D_area_entered(area):
+	die()
 # warning-ignore:unused_argument
 func _physics_process(delta: float) -> void:
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
@@ -64,3 +65,6 @@ func switch() -> void:
 		position.y = 250
 	else:
 		position.y = 850
+
+
+ # Replace with function body.

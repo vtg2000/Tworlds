@@ -16,7 +16,6 @@ func _on_StompArea2D_body_entered(body: Node) -> void:
 	if body.global_position.y < stomp_area.global_position.y:
 		return
 	print('dying')
-	die()
 
 func die() -> void:
 	queue_free()
