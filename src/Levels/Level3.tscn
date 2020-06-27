@@ -115,4 +115,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Enemy6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 3467.16, 523.505 )
+
 [editable path="Player"]

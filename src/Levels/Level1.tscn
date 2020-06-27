@@ -35,9 +35,6 @@ limit_left = -80
 limit_right = 3616
 limit_bottom = 1278
 
-[node name="Spawner2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 2520, 576 )
-
 [node name="Enemy" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1120, 1048 )
 
@@ -78,5 +75,8 @@ text = "Level 1"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Enemy2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1943.01, 528.08 )
 
 [editable path="Player"]
