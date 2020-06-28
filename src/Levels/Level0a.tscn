@@ -8,8 +8,8 @@
 
 [node name="Level0a" type="Node2D"]
 __meta__ = {
-"_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738, 94.8831 ],
-"_edit_vertical_guides_": [ 288.99, -80.0, 1810.29 ]
+"_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 1195.09, 635.738, 79.6002 ],
+"_edit_vertical_guides_": [ 288.99, -80.0, 1810.43 ]
 }
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
@@ -34,6 +34,7 @@ margin_bottom = 129.508
 text = "Press S to change sides
 
 "
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -43,6 +44,7 @@ position = Vector2( 275.168, 991.698 )
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_left = -80
+limit_top = 80
 limit_right = 1810
 
 [node name="Node2D" parent="." instance=ExtResource( 6 )]

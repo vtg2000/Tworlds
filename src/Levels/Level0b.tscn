@@ -11,8 +11,8 @@
 
 [node name="Level0b" type="Node2D"]
 __meta__ = {
-"_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738, 1195.14 ],
-"_edit_vertical_guides_": [ 288.99, -80.0, 3129.3 ]
+"_edit_horizontal_guides_": [ 641.995, 456.543, 82.366, 852.041, 635.738, 1180.96 ],
+"_edit_vertical_guides_": [ 288.99, -46.4503, 3119.25 ]
 }
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
@@ -77,9 +77,10 @@ position = Vector2( 275.168, 991.698 )
 
 [node name="Camera2D" parent="Player" index="2"]
 position = Vector2( 629.8, -88.2098 )
-limit_left = -80
-limit_right = 3129
-limit_bottom = 1200
+limit_left = -46
+limit_top = 80
+limit_right = 3120
+limit_bottom = 1181
 
 [node name="Node2D" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2811.39, 890.62 )
@@ -89,8 +90,8 @@ position = Vector2( 2811.39, 890.62 )
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Darkbackground" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1594.42, 905.521 )
-scale = Vector2( 1.70924, 0.510063 )
+position = Vector2( 1542.49, 1033.35 )
+scale = Vector2( 1.76333, 0.746775 )
 texture = ExtResource( 7 )
 
 [node name="background" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Darkbackground"]
