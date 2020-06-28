@@ -78,6 +78,7 @@ position = Vector2( 375.782, 981.899 )
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_left = -80
+limit_top = -80
 limit_right = 3613
 limit_bottom = 1278
 
@@ -125,13 +126,13 @@ position = Vector2( 3467.16, 523.505 )
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Darkbackground" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1809.37, 922.154 )
-scale = Vector2( 2.22311, 0.596162 )
+position = Vector2( 1817.56, 1008.16 )
+scale = Vector2( 2.22311, 0.755429 )
 texture = ExtResource( 3 )
 
 [node name="background" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1792.7, 310.055 )
-scale = Vector2( 2.20574, 0.548249 )
+position = Vector2( 1792.7, 256.814 )
+scale = Vector2( 2.20574, 0.646843 )
 texture = ExtResource( 9 )
 
 [editable path="Player"]

@@ -56,6 +56,7 @@ gravity = 500.0
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_left = -80
+limit_top = -80
 limit_right = 5949
 limit_bottom = 1278
 
@@ -96,13 +97,13 @@ __meta__ = {
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="background" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1955.68, 280.647 )
-scale = Vector2( 5, 0.647 )
+position = Vector2( 1955.68, 212.246 )
+scale = Vector2( 5, 0.773669 )
 texture = ExtResource( 10 )
 
 [node name="Darkbackground" type="Sprite" parent="ParallaxBackground/ParallaxLayer/background"]
-position = Vector2( 1072.67, 1135.53 )
-scale = Vector2( 2.19638, 1.03251 )
+position = Vector2( 1072.67, 1315.26 )
+scale = Vector2( 2.19638, 1.36533 )
 texture = ExtResource( 9 )
 
 [node name="ArrowShooter" parent="." instance=ExtResource( 12 )]

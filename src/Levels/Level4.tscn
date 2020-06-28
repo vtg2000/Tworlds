@@ -13,7 +13,7 @@
 
 [node name="Level4" type="Node2D"]
 __meta__ = {
-"_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738 ],
+"_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738, -90.9872 ],
 "_edit_vertical_guides_": [ 288.99, -80.0, 3604.1 ]
 }
 
@@ -79,6 +79,7 @@ position = Vector2( 536, 1008 )
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_left = -80
+limit_top = -80
 limit_right = 3604
 limit_bottom = 1278
 
@@ -87,13 +88,13 @@ limit_bottom = 1278
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Player/Camera2D/ParallaxBackground"]
 
 [node name="background" type="Sprite" parent="Player/Camera2D/ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1755.29, 294.467 )
-scale = Vector2( 2.18514, 0.660399 )
+position = Vector2( 1755.29, 265.588 )
+scale = Vector2( 2.18514, 0.713879 )
 texture = ExtResource( 10 )
 
 [node name="Darkbackground" type="Sprite" parent="Player/Camera2D/ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1774, 941.927 )
-scale = Vector2( 2.17344, 0.598023 )
+position = Vector2( 1774, 977.223 )
+scale = Vector2( 2.17344, 0.663387 )
 texture = ExtResource( 9 )
 
 [node name="CeilingSpikes" parent="." instance=ExtResource( 6 )]

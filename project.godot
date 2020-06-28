@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="OurGame"
+config/name="Tworlds!"
 run/main_scene="res://src/Levels/Level0.tscn"
 config/icon="res://icon.png"
 
