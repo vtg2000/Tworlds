@@ -68,12 +68,12 @@ position = Vector2( 24, 888 )
 speedh = 150
 
 [node name="SpikeMover" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1521.45, 632.268 )
-scale = Vector2( 1.5, 1 )
+position = Vector2( 2733.2, 641.995 )
+scale = Vector2( 2.2, 1 )
 
 [node name="SpikeMover2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1564.81, 1189.01 )
-scale = Vector2( 1.5, 1 )
+position = Vector2( 2733.2, 1189.01 )
+scale = Vector2( 2.2, 1 )
 
 [node name="Node2D" parent="." instance=ExtResource( 6 )]
 position = Vector2( 5397.54, 916.69 )
@@ -101,7 +101,7 @@ scale = Vector2( 5, 0.647 )
 texture = ExtResource( 10 )
 
 [node name="Darkbackground" type="Sprite" parent="ParallaxBackground/ParallaxLayer/background"]
-position = Vector2( 1072.67, 1135.53 )
+position = Vector2( 1072.67, 1138.4 )
 scale = Vector2( 2.19638, 1.03251 )
 texture = ExtResource( 9 )
 

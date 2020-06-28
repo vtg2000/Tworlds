@@ -54,7 +54,7 @@ collision_layer = 8
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 3.597, -20.166 )
+position = Vector2( 3.59686, -20.1658 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]

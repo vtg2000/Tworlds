@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://src/Movables/FallingFloor.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 136, 40 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "FallDown"
+length = 2.9
+tracks/0/type = "value"
+tracks/0/path = NodePath("TileMap:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 1.5, 2.2, 2.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -15, 0 ), Vector2( 15, 0 ), Vector2( -15, 0 ), Vector2( 15, 0 ), Vector2( -15, 0 ), Vector2( 15, 0 ), Vector2( 0, 0 ), Vector2( 0, 800 ), Vector2( 0, 800 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("FallArea/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.7, 1.5, 2.2, 2.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 800 ), Vector2( 0, 800 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("FallArea:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.2, 2.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[node name="FallingFloor" type="Node2D"]
+position = Vector2( -8, 24 )
+script = ExtResource( 2 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0 )
+
+[node name="FallArea" type="Area2D" parent="."]
+position = Vector2( 8, -24 )
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallArea"]
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/FallDown = SubResource( 2 )
+[connection signal="area_entered" from="FallArea" to="." method="_on_FallArea_area_entered"]

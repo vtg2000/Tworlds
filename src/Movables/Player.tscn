@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 38.032, 45.7524 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=2]
 resource_name = "DeathAnimation"
 length = 0.5
 tracks/0/type = "value"
@@ -49,8 +49,7 @@ tracks/2/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "SwitchAnimation"
+[sub_resource type="Animation" id=3]
 length = 0.3
 step = 0.05
 tracks/0/type = "value"
@@ -80,13 +79,13 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 42.6217, 47.9988 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 43.0626, 40 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 50.3087, 48.374 )
 
 [node name="Player" type="KinematicBody2D"]
@@ -109,8 +108,8 @@ limit_left = 0
 limit_top = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/DeathAnimation = SubResource( 6 )
-anims/SwitchAnimation = SubResource( 2 )
+anims/DeathAnimation = SubResource( 2 )
+anims/SwitchAnimation = SubResource( 3 )
 
 [node name="StompDetector" type="Area2D" parent="."]
 collision_layer = 2
@@ -118,15 +117,15 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StompDetector"]
 position = Vector2( 0, -48 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="SpikeDetector" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 24
+collision_layer = 0
+collision_mask = 28
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeDetector"]
 position = Vector2( 0, -48 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="PortalDetector" type="Area2D" parent="."]
 collision_layer = 0
@@ -134,7 +133,7 @@ collision_mask = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortalDetector"]
 position = Vector2( 0, -48 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 [connection signal="area_entered" from="StompDetector" to="." method="_on_StompDetector_area_entered"]
 [connection signal="area_entered" from="SpikeDetector" to="." method="_on_SpikeDetector_area_entered"]
 [connection signal="area_entered" from="PortalDetector" to="." method="_on_PortalDetector_area_entered"]

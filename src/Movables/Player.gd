@@ -10,13 +10,13 @@ var i = 0
 var levelList = ["Level0", "Level0a","Level0b","Level1","Level2","Level3","Level4","Level8","Level5","Level6","Level7","Level9","TheEnd"]
 # warning-ignore:unused_argument
 func _on_StompDetector_area_entered(area: Area2D) -> void:
-	print('yay')
+	print('yay', area)
 	_velocity = calculate_stomp_velocity(_velocity, stomp_impulse)
 
 
 # warning-ignore:unused_argument
 func _on_EnemyDetector_body_entered(_body: PhysicsBody2D) -> void:
-	anim_player.play("DeathAnimation")
+#	anim_player.play("DeathAnimation")
 	dead = 1
 
 #for me!
