@@ -93,9 +93,3 @@ func switch() -> void:
 	else:
 		position.y = 900
 		switch_pic(false)
-	
-
-# Replace with function body.
-
-
- # Replace with function body.
