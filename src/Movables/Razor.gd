@@ -4,7 +4,7 @@ extends KinematicBody2D
 func _ready() -> void:
 	pass # Replace with function body.
 
-var speed = 200.0
+var speed = 400.0
 onready var parent  = get_node('../CollisionShape2D')
 #	print(parent.shape.extents)
 	
