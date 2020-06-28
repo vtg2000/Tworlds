@@ -7,16 +7,16 @@ var dead = 0
 var player_tex1 = preload("res://assets/player.png")
 var player_tex2 = preload("res://assets/playerDark.png")
 var i = 0
-var levelList = ["Level0", "Level0a","Level0b","Level1","Level2","Level3","Level4","Level8","Level5","Level6","Level7","Level9","TheEnd"]
+var levelList = ["Level0", "Level0a","Level0b","Level1","Level2","Level3","Level4","Level8","Level5","Level6","Level7","Level9","Level10","TheEnd"]
 # warning-ignore:unused_argument
 func _on_StompDetector_area_entered(area: Area2D) -> void:
-	print('yay')
+	print('yay', area)
 	_velocity = calculate_stomp_velocity(_velocity, stomp_impulse)
 
 
 # warning-ignore:unused_argument
 func _on_EnemyDetector_body_entered(_body: PhysicsBody2D) -> void:
-	anim_player.play("DeathAnimation")
+#	anim_player.play("DeathAnimation")
 	dead = 1
 
 #for me!
@@ -46,6 +46,9 @@ func _physics_process(delta: float) -> void:
 		_velocity = move_and_slide_with_snap(
 			_velocity, snap, FLOOR_NORMAL, true
 		)
+		if position.y > 1520:
+			dead = 1
+			anim_player.play("DeathAnimation")
 	if not dead and Input.is_action_just_released("switch"):
 #		switch()
 		anim_player.play("SwitchAnimation")
@@ -96,9 +99,3 @@ func switch() -> void:
 	else:
 		position.y = 900
 		switch_pic(false)
-	
-
-# Replace with function body.
-
-
- # Replace with function body.
