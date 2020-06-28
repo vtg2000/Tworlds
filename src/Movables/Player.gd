@@ -46,6 +46,9 @@ func _physics_process(delta: float) -> void:
 		_velocity = move_and_slide_with_snap(
 			_velocity, snap, FLOOR_NORMAL, true
 		)
+		if position.y > 1520:
+			dead = 1
+			anim_player.play("DeathAnimation")
 	if not dead and Input.is_action_just_released("switch"):
 #		switch()
 		anim_player.play("SwitchAnimation")

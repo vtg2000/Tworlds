@@ -8,3 +8,7 @@ func _ready() -> void:
 func _on_FallArea_area_entered(_area: Area2D) -> void:
 	print('player enterd')
 	anim_player.play("FallDown")
+
+
+func _on_FallArea_body_entered(body: Node) -> void:
+	print('player body entered')

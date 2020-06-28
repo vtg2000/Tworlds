@@ -66,3 +66,4 @@ shape = SubResource( 1 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/FallDown = SubResource( 2 )
 [connection signal="area_entered" from="FallArea" to="." method="_on_FallArea_area_entered"]
+[connection signal="body_entered" from="FallArea" to="." method="_on_FallArea_body_entered"]
