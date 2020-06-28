@@ -30,7 +30,7 @@ Can you reach the end?
 
 ---
 # Contributors
-This project was created as part of the <b>itch.io United Game Jam</b> by
+This project was created as part of the <b>itch.io United Game Jam</b><i> in under 48 hours</i> by
 
 Anay Kulkarni - [anay121](https://github.com/Anay121)
 
