@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/Others/ArrowShooter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://src/Others/RazorMover.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Movables/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Movables/MovingSpikes.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Others/SpikeMover.tscn" type="PackedScene" id=6]
@@ -16,6 +17,9 @@ __meta__ = {
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
 layer = -1
+
+[node name="RazorMover" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1408, 616 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
