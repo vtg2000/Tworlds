@@ -66,8 +66,8 @@ texture = ExtResource( 2 )
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Darkbackground" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 933.622, 657.728 )
-scale = Vector2( 1.31316, 1.33382 )
+position = Vector2( 892.425, 657.728 )
+scale = Vector2( 1.97666, 1.33382 )
 texture = ExtResource( 3 )
 [connection signal="area_entered" from="TrophyBox" to="Player" method="_on_TrophyBox_area_entered"]
 
