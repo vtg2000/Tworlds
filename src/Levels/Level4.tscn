@@ -93,8 +93,8 @@ scale = Vector2( 2.18514, 0.713879 )
 texture = ExtResource( 10 )
 
 [node name="Darkbackground" type="Sprite" parent="Player/Camera2D/ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1774, 977.223 )
-scale = Vector2( 2.17344, 0.663387 )
+position = Vector2( 1774, 1116.66 )
+scale = Vector2( 2.17344, 0.921601 )
 texture = ExtResource( 9 )
 
 [node name="CeilingSpikes" parent="." instance=ExtResource( 6 )]

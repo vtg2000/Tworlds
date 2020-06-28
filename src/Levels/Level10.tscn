@@ -49,8 +49,8 @@ scale = Vector2( 5, 0.647 )
 texture = ExtResource( 10 )
 
 [node name="Darkbackground" type="Sprite" parent="ParallaxBackground/ParallaxLayer/background"]
-position = Vector2( 713.6, 1215.85 )
-scale = Vector2( 2.196, 1.22888 )
+position = Vector2( 715.946, 1578.42 )
+scale = Vector2( 2.19356, 1.90031 )
 texture = ExtResource( 9 )
 
 [node name="MovingSpikes" parent="." instance=ExtResource( 3 )]

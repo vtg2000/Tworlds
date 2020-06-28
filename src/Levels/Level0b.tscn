@@ -90,8 +90,8 @@ position = Vector2( 2811.39, 890.62 )
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Darkbackground" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1542.49, 1033.35 )
-scale = Vector2( 1.76333, 0.746775 )
+position = Vector2( 1542.49, 1128.42 )
+scale = Vector2( 1.76333, 0.934567 )
 texture = ExtResource( 7 )
 
 [node name="background" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Darkbackground"]

@@ -170,8 +170,8 @@ scale = Vector2( 2.24359, 0.726897 )
 texture = ExtResource( 11 )
 
 [node name="Darkbackground" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1929.85, 1003.48 )
-scale = Vector2( 2.31309, 0.739902 )
+position = Vector2( 1929.85, 1136.58 )
+scale = Vector2( 2.31309, 0.986379 )
 texture = ExtResource( 10 )
 
 [editable path="Player"]
