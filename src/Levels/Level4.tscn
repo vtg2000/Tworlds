@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Movables/Enemy.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://src/Others/CeilingSpikes.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Others/portal.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Others/Spikes.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/Darkbackground.png" type="Texture" id=9]
+[ext_resource path="res://assets/background.png" type="Texture" id=10]
 
 [node name="Level4" type="Node2D"]
 __meta__ = {
@@ -80,6 +82,20 @@ limit_left = -80
 limit_right = 3604
 limit_bottom = 1278
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Player/Camera2D" index="0"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Player/Camera2D/ParallaxBackground"]
+
+[node name="background" type="Sprite" parent="Player/Camera2D/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1755.29, 294.467 )
+scale = Vector2( 2.18514, 0.660399 )
+texture = ExtResource( 10 )
+
+[node name="Darkbackground" type="Sprite" parent="Player/Camera2D/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1774, 941.927 )
+scale = Vector2( 2.17344, 0.598023 )
+texture = ExtResource( 9 )
+
 [node name="CeilingSpikes" parent="." instance=ExtResource( 6 )]
 position = Vector2( 416.02, 215.7 )
 
@@ -125,10 +141,10 @@ position = Vector2( -143.349, -756.958 )
 scale = Vector2( 5, 5 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Area2D"]
-margin_left = 6.24199
-margin_top = 9.70977
-margin_right = 96.242
-margin_bottom = 49.7098
+margin_left = 11.0
+margin_top = 18.0
+margin_right = 96.0
+margin_bottom = 50.0
 text = "Level 4
 "
 __meta__ = {

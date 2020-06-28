@@ -1,14 +1,15 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Movables/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=2]
-[ext_resource path="res://src/Others/Spawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Darkbackground.png" type="Texture" id=3]
 [ext_resource path="res://src/Movables/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Others/Spikes.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Movables/MovingSpikes.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Others/SpikeMover.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Others/portal.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Others/CeilingSpikes.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/background.png" type="Texture" id=10]
 
 [node name="Level2" type="Node2D"]
 __meta__ = {
@@ -27,9 +28,6 @@ tile_data = PoolIntArray( 65535, 1, 0, 0, 0, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1,
 
 [node name="KinematicBody2D" parent="TileMap" instance=ExtResource( 5 )]
 position = Vector2( 1295.07, 542.906 )
-
-[node name="Spawner" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2240, 1136 )
 
 [node name="Enemy" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1522.04, 980.575 )
@@ -55,7 +53,7 @@ position = Vector2( 90.8249, 339.381 )
 scale = Vector2( 1, 0.9 )
 
 [node name="SpikeMover" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1549.68, 1173.89 )
+position = Vector2( 1552.33, 1176.54 )
 scale = Vector2( 1.5, 1 )
 
 [node name="SpikeMover2" parent="." instance=ExtResource( 7 )]
@@ -88,10 +86,10 @@ limit_bottom = 1278
 scale = Vector2( 5, 5 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Area2D"]
-margin_left = 9.5868
-margin_top = 9.5868
-margin_right = 119.587
-margin_bottom = 49.5868
+margin_left = 20.0
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 49.0
 text = "Level 2
 "
 __meta__ = {
@@ -103,5 +101,25 @@ position = Vector2( 936.007, 217.802 )
 
 [node name="CeilingSpikes2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 3444.89, 212.64 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2702.1, 1069.33 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2646.19, 524.229 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="background" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1839.18, 272.757 )
+scale = Vector2( 2.17846, 0.644076 )
+texture = ExtResource( 10 )
+
+[node name="Darkbackground" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1846.57, 961.071 )
+scale = Vector2( 2.17846, 0.630286 )
+texture = ExtResource( 3 )
 
 [editable path="Player"]

@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Movables/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://assets/Darkbackground.png" type="Texture" id=3]
 [ext_resource path="res://src/Movables/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Movables/MovingSpikes.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Others/SpikeMover.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Others/Spikes.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Others/portal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/background.png" type="Texture" id=9]
 
 [node name="Level3" type="Node2D"]
 __meta__ = {
@@ -105,14 +107,31 @@ position = Vector2( 3444.47, 1002.21 )
 scale = Vector2( 5, 5 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Area2D"]
-margin_left = 15.0485
-margin_top = 7.08165
-margin_right = 99.0485
-margin_bottom = 47.0816
+margin_left = 20.0
+margin_top = 18.0
+margin_right = 101.0
+margin_bottom = 50.0
 text = "Level 3
 "
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Enemy6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 3467.16, 523.505 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Darkbackground" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1809.37, 922.154 )
+scale = Vector2( 2.22311, 0.596162 )
+texture = ExtResource( 3 )
+
+[node name="background" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1792.7, 310.055 )
+scale = Vector2( 2.20574, 0.548249 )
+texture = ExtResource( 9 )
 
 [editable path="Player"]

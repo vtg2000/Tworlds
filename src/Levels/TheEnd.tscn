@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/golden_trophy.png" type="Texture" id=2]
+[ext_resource path="res://assets/Darkbackground.png" type="Texture" id=3]
 [ext_resource path="res://src/Movables/Player.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -9,8 +10,8 @@ extents = Vector2( 330.33, 331.347 )
 
 [node name="TheEnd" type="Node2D"]
 __meta__ = {
-"_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 635.738 ],
-"_edit_vertical_guides_": [ 288.99, -80.0 ]
+"_edit_horizontal_guides_": [ 641.995, 456.543, 326.664, 852.041, 751.241, 1387.76, 98.4322, 1372.36, 1372.36, 256.881, 1359.68 ],
+"_edit_vertical_guides_": [ 288.99, -80.0, 2217.25, 1849.65, 2014.43 ]
 }
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
@@ -43,6 +44,8 @@ position = Vector2( 275.168, 991.698 )
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_left = -80
+limit_right = 2014
+limit_bottom = 1372
 
 [node name="TrophyBox" type="Area2D" parent="."]
 position = Vector2( 889.028, 431.182 )
@@ -57,6 +60,15 @@ shape = SubResource( 1 )
 [node name="golden_trophy" type="Sprite" parent="TrophyBox"]
 position = Vector2( -4.02055, -2.79617 )
 texture = ExtResource( 2 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Darkbackground" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 933.622, 657.728 )
+scale = Vector2( 1.31316, 1.33382 )
+texture = ExtResource( 3 )
 [connection signal="area_entered" from="TrophyBox" to="Player" method="_on_TrophyBox_area_entered"]
 
 [editable path="Player"]

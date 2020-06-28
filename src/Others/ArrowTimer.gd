@@ -15,6 +15,6 @@ func _on_Timer_timeout() -> void:
 		a.rotation_degrees = -90
 		a.setDirection(1)
 	elif parent.rotation_degrees >=80:
-		a.rotation_degrees = 90
+		a.rotation_degrees = 180
 		a.setDirection(2)
 	call_deferred("add_child", a)
