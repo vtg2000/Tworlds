@@ -7,7 +7,7 @@ onready var anim_player: AnimationPlayer = get_node("AnimationPlayer")
 var player_tex1 = preload("res://assets/player.png")
 var player_tex2 = preload("res://assets/playerDark.png")
 var i = 0
-var levelList = ["Level0", "Level0a","Level0b","Level1","Level2","Level3","Level4","Level5","Level6","TheEnd"]
+var levelList = ["Level0", "Level0a","Level0b","Level1","Level2","Level3","Level4","Level5","Level6","Level7","TheEnd"]
 # warning-ignore:unused_argument
 func _on_StompDetector_area_entered(area: Area2D) -> void:
 	print('yay')
