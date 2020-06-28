@@ -3,8 +3,8 @@
   <img src="assets/Logopng.png"/>
   <br>
   <a href="https://godotengine.org/"> <img src="https://img.shields.io/badge/Made%20With-Godot-blue?style=for-the-badge" alt="made with"/> </a>
-  <a href="https://godotengine.org/"> <img src="https://img.shields.io/badge/Download%20For-Windows-blue?style=for-the-badge" alt="made with"/> </a>
-  <a href="https://godotengine.org/"> <img src="https://img.shields.io/badge/Download%20For-Linux-blue?style=for-the-badge" alt="made with"/> </a>
+  <a href="https://vtg2000.itch.io/tworlds"> <img src="https://img.shields.io/badge/Download%20For-Windows-blue?style=for-the-badge" alt="made with"/> </a>
+  <a href="https://vtg2000.itch.io/tworlds"> <img src="https://img.shields.io/badge/Download%20For-Linux-blue?style=for-the-badge" alt="made with"/> </a>
   <br>
   <a href="https://vtg2000.itch.io/tworlds"> <img src="https://img.shields.io/badge/Download%20At-itch.io-red?style=for-the-badge" alt="play at"/> </a>
 
@@ -21,6 +21,12 @@ Can you do it?
 
 ---
 ## Screenshots
+
+<img src="assets/tworlds.gif" width=80%>
+<img src="assets/ss1.png" width=60%>
+<img src="assets/ss2.png" width=60%>
+<img src="assets/ss3.png" width=60%>
+<img src="assets/ss4.png" width=60%>
 
 ---
 # Contributors
