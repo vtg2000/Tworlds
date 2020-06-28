@@ -16,11 +16,11 @@ func _on_StompDetector_area_entered(area: Area2D) -> void:
 
 # warning-ignore:unused_argument
 func _on_EnemyDetector_body_entered(_body: PhysicsBody2D) -> void:
-	die()
+	anim_player.play("DeathAnimation")
 
 #for me!
 func _on_SpikeDetector_area_entered(_area: Area2D) -> void:
-	die()
+	anim_player.play("DeathAnimation")
 
 func _on_TrophyBox_area_entered(area):
 	get_tree().change_scene("res://src/Levels/Level0.tscn")

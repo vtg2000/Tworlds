@@ -9,11 +9,10 @@ onready var parent  = get_node('../CollisionShape2D')
 #	print(parent.shape.extents)
 	
 func _physics_process(delta: float) -> void:
+	print(parent == null)
 	if parent:
 		if parent.shape is RectangleShape2D:
 			var bounds = parent.shape.extents
 			if position.x > bounds.x or position.x < -bounds.x:
 				speed*=-1 
 			position.x += speed*delta
-		else:
-			print('normal')
