@@ -1,7 +1,7 @@
 extends Actor
 
 
-export var stomp_impulse: = 600.0
+export var stomp_impulse: = 300.0
 onready var anim_player: AnimationPlayer = get_node("AnimationPlayer")
 
 var player_tex1 = preload("res://assets/player.png")
