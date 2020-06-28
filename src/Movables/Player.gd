@@ -3,11 +3,11 @@ extends Actor
 
 export var stomp_impulse: = 300.0
 onready var anim_player: AnimationPlayer = get_node("AnimationPlayer")
-
+var dead = 0
 var player_tex1 = preload("res://assets/player.png")
 var player_tex2 = preload("res://assets/playerDark.png")
 var i = 0
-var levelList = ["Level0", "Level0a","Level0b","Level1","Level2","Level3","Level4","Level5","Level6","TheEnd"]
+var levelList = ["Level0", "Level0a","Level0b","Level1","Level2","Level3","Level4","Level8","Level5","Level6","Level7","Level9","TheEnd"]
 # warning-ignore:unused_argument
 func _on_StompDetector_area_entered(area: Area2D) -> void:
 	print('yay')
@@ -17,10 +17,12 @@ func _on_StompDetector_area_entered(area: Area2D) -> void:
 # warning-ignore:unused_argument
 func _on_EnemyDetector_body_entered(_body: PhysicsBody2D) -> void:
 	anim_player.play("DeathAnimation")
+	dead = 1
 
 #for me!
 func _on_SpikeDetector_area_entered(_area: Area2D) -> void:
 	anim_player.play("DeathAnimation")
+	dead = 1
 
 func _on_TrophyBox_area_entered(area):
 	get_tree().change_scene("res://src/Levels/Level0.tscn")
@@ -36,14 +38,15 @@ func _on_PortalDetector_area_entered(area):
 
 # warning-ignore:unused_argument
 func _physics_process(delta: float) -> void:
-	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
-	var direction: = get_direction()
-	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
-	var snap: Vector2 = Vector2.DOWN * 60.0 if direction.y == 0.0 else Vector2.ZERO
-	_velocity = move_and_slide_with_snap(
-		_velocity, snap, FLOOR_NORMAL, true
-	)
-	if Input.is_action_just_released("switch"):
+	if not dead:
+		var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
+		var direction: = get_direction()
+		_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
+		var snap: Vector2 = Vector2.DOWN * 60.0 if direction.y == 0.0 else Vector2.ZERO
+		_velocity = move_and_slide_with_snap(
+			_velocity, snap, FLOOR_NORMAL, true
+		)
+	if not dead and Input.is_action_just_released("switch"):
 #		switch()
 		anim_player.play("SwitchAnimation")
 
