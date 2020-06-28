@@ -3,7 +3,7 @@
   <img src="assets/Logopng.png"/>
   <br>
   <a href="https://godotengine.org/"> <img src="https://img.shields.io/badge/Made%20With-Godot-blue?style=for-the-badge" alt="made with"/> </a>
-  <a href="https://vtg2000.itch.io/tworlds"> <img src="https://img.shields.io/badge/Download%20For-Windows-orange?style=for-the-badge" alt="made with"/> </a>
+  <a href="https://vtg2000.itch.io/tworlds"> <img src="https://img.shields.io/badge/Download%20For-Windows-darkblue?style=for-the-badge" alt="made with"/> </a>
   <a href="https://vtg2000.itch.io/tworlds"> <img src="https://img.shields.io/badge/Download%20For-Linux-orange?style=for-the-badge" alt="made with"/> </a>
   <br>
   <a href="https://vtg2000.itch.io/tworlds"> <img src="https://img.shields.io/badge/Download%20At-itch.io-red?style=for-the-badge" alt="play at"/> </a>
@@ -15,7 +15,7 @@
 A game of two worlds, light and dark, and a player with the power to travel between these worlds.
 
 A puzzle/platformer game where you take control of the player and use their powers to reach the portals at the end of each levels. 
-Can you do it?
+Can you reach the end?
 
 <a href="https://vtg2000.itch.io/tworlds"> Download the game here </a>
 
